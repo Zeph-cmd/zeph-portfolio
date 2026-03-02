@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0a0a0f;
+  --color-foreground: #e4e4e7;
+  --color-muted: #a1a1aa;
+  --color-neon: #7c3aed;
+  --color-neon-light: #a78bfa;
+  --color-neon-blue: #3b82f6;
+  --color-glass: rgba(255, 255, 255, 0.05);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #7c3aed55;
+  border-radius: 999px;
+}
+
+/* ── Selection ── */
+::selection {
+  background: #7c3aed55;
+  color: #fff;
+}
+
+/* ── Glass card utility ── */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ── Glow utilities ── */
+.glow-sm {
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.15);
+}
+.glow-md {
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.2);
+}
+.glow-line {
+  box-shadow: 0 0 8px rgba(124, 58, 237, 0.4);
+}
+
+/* ── Neon text glow ── */
+.text-glow {
+  text-shadow: 0 0 20px rgba(124, 58, 237, 0.5), 0 0 40px rgba(124, 58, 237, 0.2);
+}
+
+/* ── Gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, #a78bfa, #7c3aed, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Background grid ── */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(124, 58, 237, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ── Animated gradient border ── */
+@keyframes borderGlow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+.animate-border-glow {
+  animation: borderGlow 3s ease-in-out infinite;
+}
