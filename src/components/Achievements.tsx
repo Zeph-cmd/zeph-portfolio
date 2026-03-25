@@ -6,25 +6,21 @@ import SectionWrapper from "./SectionWrapper";
 
 const achievements = [
   {
-    year: "2025",
     title: "Started Data Science at KSTU",
     description:
       "Began formal studies in Data Science, combining statistical foundations with real-world application.",
   },
   {
-    year: "2025",
     title: "Built First Full-Stack Project",
     description:
       "Designed and deployed a secure authentication system with role-based access and PostgreSQL backend.",
   },
   {
-    year: "2026",
     title: "Cybersecurity Self-Study",
     description:
       "Completed foundational threat modeling, authentication flow design, and secure database practices training.",
   },
   {
-    year: "2026",
     title: "Launched Portfolio & Brand",
     description:
       "Designed and shipped a production-ready personal portfolio, positioning for freelance and professional work.",
@@ -56,8 +52,7 @@ function TimelineItem({
       <div className="absolute left-0 top-2 h-[15px] w-[15px] rounded-full border-2 border-neon bg-background glow-line" />
 
       {/* Content */}
-      <span className="font-mono text-xs text-neon-light/60">{item.year}</span>
-      <h3 className="mt-1 text-lg font-semibold text-foreground">
+      <h3 className="text-lg font-semibold text-foreground">
         {item.title}
       </h3>
       <p className="mt-1 text-sm text-muted leading-relaxed">
