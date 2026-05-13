@@ -2,28 +2,39 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import SectionWrapper from "./SectionWrapper";
 
 const achievements = [
   {
-    title: "Started Data Science at KSTU",
+    title: "Presidential Award",
     description:
-      "Began formal studies in Data Science, combining statistical foundations with real-world application.",
+      "Recognized with a presidential award for strong performance and leadership.",
+    href: "/achievements/presidential-award-1.pdf",
+  },
+  {
+    title: "Presidential Award Certificate",
+    description:
+      "A second official presidential award record showing the same top-level recognition.",
+    href: "/achievements/presidential-award-2.pdf",
+  },
+  {
+    title: "Scholarship to Anna Maria College",
+    description:
+      "Awarded a scholarship to study abroad at Anna Maria College, reflecting academic potential and excellence.",
+    href: "/achievements/anna-maria-college-scholarship.pdf",
   },
   {
     title: "Built First Full-Stack Project",
     description:
       "Designed and deployed a secure authentication system with role-based access and PostgreSQL backend.",
+    href: "#projects",
   },
   {
     title: "Cybersecurity Self-Study",
     description:
       "Completed foundational threat modeling, authentication flow design, and secure database practices training.",
-  },
-  {
-    title: "Launched Portfolio & Brand",
-    description:
-      "Designed and shipped a production-ready personal portfolio, positioning for freelance and professional work.",
+    href: "#skills",
   },
 ];
 
@@ -58,6 +69,16 @@ function TimelineItem({
       <p className="mt-1 text-sm text-muted leading-relaxed">
         {item.description}
       </p>
+
+      <a
+        href={item.href}
+        target={item.href.startsWith("#") ? undefined : "_blank"}
+        rel={item.href.startsWith("#") ? undefined : "noopener noreferrer"}
+        className="mt-4 inline-flex items-center gap-2 rounded-full border border-neon/30 px-4 py-2 text-xs font-semibold text-neon-light transition-all duration-300 hover:bg-neon/10 hover:shadow-[0_0_24px_rgba(124,58,237,0.18)]"
+      >
+        View
+        <ExternalLink size={14} />
+      </a>
     </motion.div>
   );
 }
