@@ -33,8 +33,9 @@ export default function Zephtech() {
             Smart Jotter
           </h3>
           <p className="mt-3 text-sm leading-relaxed text-muted">
-            A focused digital jotter designed to make capturing, organizing,
-            and returning to everyday ideas simple and reliable.
+            An AI-powered note-taking and learning platform for capturing,
+            organizing, and revisiting ideas. Built with Next.js, Supabase,
+            OpenAI, and Deepgram for a smarter writing workflow.
           </p>
           <a
             href="https://smart-jotter.vercel.app/"
@@ -59,7 +60,9 @@ export default function Zephtech() {
             A role-based school management platform for administrators,
             teachers, and parents. It brings together academic records,
             subjects, grades, student and teacher records, tuition tracking,
-            and in-app communication in one system.
+            attendance, homework, approvals, audit logs, and in-app
+            communication in one system. Access is protected with JWT
+            authentication, role checks, password hashing, and ownership rules.
           </p>
           <p className="mt-3 text-xs leading-relaxed text-amber-200/70">
             The previous public demo is no longer available, so this project is
@@ -96,7 +99,7 @@ export default function Zephtech() {
             <div className="relative aspect-[3/4] overflow-hidden rounded-xl border border-glass-border">
               <Image
                 src="/zephtech/groundtruth/groundtruth-1.jpg"
-                alt="GroundTruth Vision application dashboard"
+                alt="GroundTruth Vision mobile data collection app"
                 fill
                 sizes="180px"
                 className="object-cover"
@@ -110,15 +113,16 @@ export default function Zephtech() {
                 GroundTruth Vision
               </h3>
               <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
-                A field data collection and visual intelligence tool built to
-                organize trips, GPS coordinates, photo evidence, and synced
-                data packages. Its dashboard includes trip metrics, a manual
-                photo vault, offline-friendly capture flows, and sharing tools
-                for turning field observations into usable ground truth data.
+                A dual-application system for road-condition data collection and
+                analysis. The mobile companion app captures photos, GPS, and
+                video, then exports verified .rvtrip data packages. The desktop
+                explorer imports those trips, checks file integrity with
+                SHA-256, analyzes routes and imagery, and exports reports for
+                decision-makers.
               </p>
               <p className="mt-3 text-xs text-sky-200/70">
-                No public link is available yet. This preview documents the
-                product direction while development continues.
+                Mobile collector preview shown. No public link is available yet;
+                this preview documents the product while development continues.
               </p>
             </div>
           </div>
