@@ -10,6 +10,17 @@ const sosImages = Array.from(
   (_, index) => `/zephtech/sos/sos-${index + 1}.jpg`
 );
 
+const groundtruthImages = [
+  {
+    src: "/zephtech/groundtruth/groundtruth-1.jpg",
+    label: "Mobile collector",
+  },
+  ...Array.from({ length: 7 }, (_, index) => ({
+    src: `/zephtech/groundtruth/groundtruth-desktop-${index + 1}.jpg`,
+    label: "Desktop explorer",
+  })),
+];
+
 export default function Zephtech() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -95,36 +106,46 @@ export default function Zephtech() {
 
         {/* GroundTruth Vision */}
         <article className="glass rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:glow-sm lg:col-span-2">
-          <div className="grid items-center gap-6 md:grid-cols-[180px_minmax(0,1fr)]">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-xl border border-glass-border">
-              <Image
-                src="/zephtech/groundtruth/groundtruth-1.jpg"
-                alt="GroundTruth Vision mobile data collection app"
-                fill
-                sizes="180px"
-                className="object-cover"
-              />
-            </div>
-            <div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-sky-400">
-                In development · Product preview
-              </span>
-              <h3 className="mt-3 text-xl font-bold text-foreground">
-                GroundTruth Vision
-              </h3>
-              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
-                A dual-application system for road-condition data collection and
-                analysis. The mobile companion app captures photos, GPS, and
-                video, then exports verified .rvtrip data packages. The desktop
-                explorer imports those trips, checks file integrity with
-                SHA-256, analyzes routes and imagery, and exports reports for
-                decision-makers.
-              </p>
-              <p className="mt-3 text-xs text-sky-200/70">
-                Mobile collector preview shown. No public link is available yet;
-                this preview documents the product while development continues.
-              </p>
-            </div>
+          <span className="text-xs font-semibold uppercase tracking-wider text-sky-400">
+            In development · Product preview
+          </span>
+          <h3 className="mt-3 text-xl font-bold text-foreground">
+            GroundTruth Vision
+          </h3>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
+            A dual-application system for road-condition data collection and
+            analysis. The mobile companion app captures photos, GPS, and video,
+            then exports verified .rvtrip data packages. The desktop explorer
+            imports those trips, checks file integrity with SHA-256, analyzes
+            routes and imagery, and exports reports for decision-makers.
+          </p>
+          <p className="mt-3 text-xs text-sky-200/70">
+            Mobile collector and desktop explorer previews shown below. No
+            public link is available yet; this gallery documents the product
+            while development continues.
+          </p>
+
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {groundtruthImages.map((image, index) => (
+              <button
+                key={image.src}
+                type="button"
+                onClick={() => setSelectedImage(image.src)}
+                className="group relative aspect-video overflow-hidden rounded-lg border border-glass-border bg-glass"
+                aria-label={`View GroundTruth ${image.label} screenshot ${index + 1}`}
+              >
+                <Image
+                  src={image.src}
+                  alt={`GroundTruth Vision ${image.label} screenshot ${index + 1}`}
+                  fill
+                  sizes="(max-width: 640px) 42vw, (max-width: 1024px) 180px, 260px"
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <span className="absolute inset-x-0 bottom-0 flex items-center justify-center gap-1 bg-black/65 py-1 text-[10px] text-white opacity-0 transition-opacity group-hover:opacity-100">
+                  <Images size={11} /> {image.label}
+                </span>
+              </button>
+            ))}
           </div>
         </article>
       </div>
@@ -134,13 +155,13 @@ export default function Zephtech() {
           className="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 p-6 backdrop-blur-md"
           role="dialog"
           aria-modal="true"
-          aria-label="Expanded SOS screenshot"
+          aria-label="Expanded product screenshot"
           onClick={() => setSelectedImage(null)}
         >
           <div className="relative h-[85vh] w-full max-w-md">
             <Image
               src={selectedImage}
-              alt="Expanded School Operating System screenshot"
+              alt="Expanded product screenshot"
               fill
               sizes="(max-width: 640px) 90vw, 448px"
               className="rounded-2xl object-contain"
