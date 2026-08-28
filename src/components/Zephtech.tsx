@@ -113,17 +113,28 @@ export default function Zephtech() {
             GroundTruth Vision
           </h3>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
-            A dual-application system for road-condition data collection and
-            analysis. The mobile companion app captures photos, GPS, and video,
-            then exports verified .rvtrip data packages. The desktop explorer
-            imports those trips, checks file integrity with SHA-256, analyzes
-            routes and imagery, and exports reports for decision-makers.
+            A dual-application system for collecting and analyzing trustworthy
+            field evidence across multiple sectors. The mobile companion app
+            captures geotagged, timestamped photos and video, then exports
+            verified .rvtrip data packages. The desktop explorer imports those
+            trips, checks file integrity with SHA-256, analyzes imagery and
+            location data, and exports evidence for decision-makers.
           </p>
           <p className="mt-3 text-xs text-sky-200/70">
             Mobile collector and desktop explorer previews shown below. No
             public link is available yet; this gallery documents the product
             while development continues.
           </p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {["Road infrastructure", "NGO field programs", "Insurance", "Journalism", "Local government"].map((useCase) => (
+              <span
+                key={useCase}
+                className="rounded-full border border-sky-400/20 bg-sky-400/5 px-3 py-1 text-[10px] text-sky-200/80"
+              >
+                {useCase}
+              </span>
+            ))}
+          </div>
 
           <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
             {groundtruthImages.map((image, index) => (
@@ -158,12 +169,12 @@ export default function Zephtech() {
           aria-label="Expanded product screenshot"
           onClick={() => setSelectedImage(null)}
         >
-          <div className="relative h-[85vh] w-full max-w-md">
+          <div className="relative h-[92vh] w-full max-w-7xl">
             <Image
               src={selectedImage}
               alt="Expanded product screenshot"
               fill
-              sizes="(max-width: 640px) 90vw, 448px"
+              sizes="95vw"
               className="rounded-2xl object-contain"
             />
             <button
