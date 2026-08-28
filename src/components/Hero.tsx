@@ -36,21 +36,29 @@ export default function Hero() {
           <span className="gradient-text text-glow">Zephaniah</span>
         </motion.h1>
 
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          className="mt-3 text-base font-semibold text-neon-light sm:text-lg"
+        >
+          Founder &amp; Lead Developer of ZEPHtech
+        </motion.p>
+
         {/* Tagline */}
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
+          transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
           className="mt-5 text-lg text-muted sm:text-xl"
         >
-          Data Science Student &middot; Web Developer &middot; Cybersecurity
-          Enthusiast
+          Full Stack Developer &middot; Cybersecurity Enthusiast
         </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.35, ease: "easeOut" }}
+          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
           className="mt-2 font-mono text-sm text-neon-light/70"
         >
           Building real-world systems, not tutorials.
