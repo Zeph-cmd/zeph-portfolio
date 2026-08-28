@@ -1,8 +1,13 @@
 "use client";
 
+import Image from "next/image";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { Maximize2, X } from "lucide-react";
 
 export default function Hero() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <section
       id="hero"
@@ -11,6 +16,33 @@ export default function Hero() {
       {/* Ambient glow blobs */}
       <div className="pointer-events-none absolute -top-40 left-1/4 h-[500px] w-[500px] rounded-full bg-neon/10 blur-[160px]" />
       <div className="pointer-events-none absolute bottom-0 right-1/4 h-[400px] w-[400px] rounded-full bg-neon-blue/10 blur-[140px]" />
+
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.35, ease: "easeOut" }}
+        className="group absolute right-5 top-24 z-20 h-40 w-28 overflow-hidden rounded-2xl border border-neon/30 bg-background/70 shadow-[0_0_30px_rgba(124,58,237,0.18)] sm:right-10 sm:top-28 sm:h-56 sm:w-40 lg:right-16 lg:top-32 lg:h-72 lg:w-52"
+      >
+        <Image
+          src="/zeph-jacket.jpg"
+          alt="Zephaniah wearing a jacket"
+          fill
+          priority
+          sizes="(max-width: 640px) 112px, (max-width: 1024px) 160px, 208px"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <button
+          type="button"
+          onClick={() => setIsExpanded(true)}
+          className="absolute inset-0 flex items-center justify-center bg-black/0 text-white opacity-0 transition-all duration-300 group-hover:bg-black/35 group-hover:opacity-100 focus-visible:bg-black/35 focus-visible:opacity-100"
+          aria-label="Expand portrait"
+        >
+          <span className="flex items-center gap-2 rounded-full border border-white/25 bg-black/45 px-3 py-2 text-xs font-semibold backdrop-blur-sm">
+            <Maximize2 size={14} />
+            Expand
+          </span>
+        </button>
+      </motion.div>
 
       <div className="relative z-10 mx-auto max-w-3xl text-center">
         {/* Badge */}
@@ -82,6 +114,34 @@ export default function Hero() {
           </a>
         </motion.div>
       </div>
+
+      {isExpanded && (
+        <div
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 p-6 backdrop-blur-md"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Expanded portrait"
+          onClick={() => setIsExpanded(false)}
+        >
+          <div className="relative h-[80vh] w-full max-w-2xl">
+            <Image
+              src="/zeph-jacket.jpg"
+              alt="Zephaniah wearing a jacket"
+              fill
+              sizes="(max-width: 768px) 92vw, 672px"
+              className="rounded-2xl object-contain"
+            />
+            <button
+              type="button"
+              onClick={() => setIsExpanded(false)}
+              className="absolute right-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:bg-black/80"
+              aria-label="Close expanded portrait"
+            >
+              <X size={20} />
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
