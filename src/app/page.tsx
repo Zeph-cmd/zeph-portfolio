@@ -3,6 +3,7 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Achievements from "@/components/Achievements";
+import Zephtech from "@/components/Zephtech";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Achievements />
+      <Zephtech />
       <Contact />
     </>
   );
