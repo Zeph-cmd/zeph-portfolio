@@ -36,27 +36,36 @@ export default function Zephtech() {
 
       <div className="grid gap-6 lg:grid-cols-2">
         {/* Smart Jotter */}
-        <article className="glass rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:glow-sm">
-          <span className="text-xs font-semibold uppercase tracking-wider text-emerald-400">
-            Live product
-          </span>
-          <h3 className="mt-3 text-xl font-bold text-foreground">
-            Smart Jotter
-          </h3>
-          <p className="mt-3 text-sm leading-relaxed text-muted">
-            An AI-powered note-taking and learning platform for capturing,
-            organizing, and revisiting ideas. Built with Next.js, Supabase,
-            OpenAI, and Deepgram for a smarter writing workflow.
-          </p>
-          <a
-            href="https://smart-jotter.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-neon/30 px-4 py-2 text-xs font-semibold text-neon-light transition-all duration-300 hover:bg-neon/10"
-          >
-            Visit Smart Jotter
-            <ExternalLink size={14} />
-          </a>
+        <article className="group relative overflow-hidden glass rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 hover:glow-md sm:p-9 lg:col-span-2">
+          <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-neon/10 blur-[90px] transition-opacity duration-300 group-hover:opacity-80" />
+          <div className="relative z-10 grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_auto]">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-400">
+                ZEPHtech flagship · Live product
+              </span>
+              <h3 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                Smart Jotter
+              </h3>
+              <p className="mt-3 max-w-2xl text-lg font-semibold leading-relaxed text-neon-light">
+                Transforms your notes into knowledge.
+              </p>
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
+                An intelligent note-taking and learning platform that helps
+                students, professionals, researchers, and anyone who learns or
+                records information capture ideas, organize them, and turn them
+                into useful understanding.
+              </p>
+            </div>
+            <a
+              href="https://smart-jotter.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-fit items-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-5 py-3 text-sm font-semibold text-neon-light transition-all duration-300 hover:bg-neon/20 hover:shadow-[0_0_25px_rgba(124,58,237,0.25)]"
+            >
+              Explore Smart Jotter
+              <ExternalLink size={15} />
+            </a>
+          </div>
         </article>
 
         {/* School Operating System */}
