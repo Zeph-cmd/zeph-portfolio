@@ -113,7 +113,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-7 py-3 text-sm font-semibold text-neon-light transition-all duration-300 hover:bg-neon/20 hover:shadow-[0_0_30px_rgba(124,58,237,0.3)] disabled:opacity-50 disabled:cursor-not-allowed"
+            className="shimmer-control inline-flex items-center justify-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-7 py-3 text-sm font-semibold text-neon-light transition-all duration-300 hover:bg-neon/20 hover:shadow-[0_0_30px_rgba(124,58,237,0.3)] disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {status === "sending" ? (
               <>

@@ -67,7 +67,7 @@ function TimelineItem({
           href={item.href}
           target={item.href.startsWith("/") ? "_blank" : undefined}
           rel={item.href.startsWith("/") ? "noopener noreferrer" : undefined}
-          className="mt-3 inline-flex w-fit items-center rounded-full border border-neon/30 bg-neon/10 px-4 py-2 text-xs font-semibold text-neon-light transition-all duration-300 hover:bg-neon/20 hover:glow-sm"
+          className="shimmer-control mt-3 inline-flex w-fit items-center rounded-full border border-neon/30 bg-neon/10 px-4 py-2 text-xs font-semibold text-neon-light transition-all duration-300 hover:bg-neon/20 hover:glow-sm"
         >
           {item.label}
         </a>

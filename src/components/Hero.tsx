@@ -34,7 +34,7 @@ export default function Hero() {
         <button
           type="button"
           onClick={() => setIsExpanded(true)}
-          className="absolute inset-0 flex items-center justify-center bg-black/0 text-white opacity-0 transition-all duration-300 group-hover:bg-black/35 group-hover:opacity-100 focus-visible:bg-black/35 focus-visible:opacity-100"
+          className="shimmer-control absolute inset-0 flex items-center justify-center bg-black/0 text-white opacity-0 transition-all duration-300 group-hover:bg-black/35 group-hover:opacity-100 focus-visible:bg-black/35 focus-visible:opacity-100"
           aria-label="Expand portrait"
         >
           <span className="flex items-center gap-2 rounded-full border border-white/25 bg-black/45 px-3 py-2 text-xs font-semibold backdrop-blur-sm">
@@ -74,7 +74,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="mt-3 text-base font-semibold text-neon-light sm:text-lg"
         >
-          Founder &amp; Lead Developer of ZEPHtech
+          Founder &amp; Lead Developer of Z
         </motion.p>
 
         {/* Tagline */}
@@ -105,7 +105,7 @@ export default function Hero() {
         >
           <a
             href="#projects"
-            className="group relative inline-flex items-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-7 py-3 text-sm font-semibold text-neon-light transition-all duration-300 hover:bg-neon/20 hover:glow-md hover:shadow-[0_0_30px_rgba(124,58,237,0.3)]"
+            className="shimmer-control group relative inline-flex items-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-7 py-3 text-sm font-semibold text-neon-light transition-all duration-300 hover:bg-neon/20 hover:glow-md hover:shadow-[0_0_30px_rgba(124,58,237,0.3)]"
           >
             View Projects
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
@@ -134,7 +134,7 @@ export default function Hero() {
             <button
               type="button"
               onClick={() => setIsExpanded(false)}
-              className="absolute right-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:bg-black/80"
+              className="shimmer-control absolute right-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:bg-black/80"
               aria-label="Close expanded portrait"
             >
               <X size={20} />

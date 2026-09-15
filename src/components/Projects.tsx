@@ -135,7 +135,7 @@ function ProjectCard({
         href={project.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-5 inline-flex items-center gap-2 rounded-full border border-neon/30 px-4 py-2 text-xs font-semibold text-neon-light transition-all duration-300 hover:bg-neon/10 w-fit"
+        className="shimmer-control mt-5 inline-flex items-center gap-2 rounded-full border border-neon/30 px-4 py-2 text-xs font-semibold text-neon-light transition-all duration-300 hover:bg-neon/10 w-fit"
       >
         {project.linkLabel}
         <LinkIcon size={14} />

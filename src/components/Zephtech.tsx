@@ -25,10 +25,10 @@ export default function Zephtech() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <SectionWrapper id="zephtech" title="ZEPHtech">
+    <SectionWrapper id="zephtech" title="Z">
       <div className="mb-10 max-w-3xl">
         <p className="text-base leading-relaxed text-muted sm:text-lg">
-          ZEPHtech is a software startup firm building practical, data-driven
+          Z is a software startup firm building practical, data-driven
           systems for real-world needs. Here are selected products developed
           by our team.
         </p>
@@ -41,7 +41,7 @@ export default function Zephtech() {
           <div className="relative z-10 grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_auto]">
             <div>
               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-400">
-                ZEPHtech flagship · Live product
+                Z flagship · Live product
               </span>
               <h3 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                 Smart Jotter
@@ -60,7 +60,7 @@ export default function Zephtech() {
               href="https://smart-jotter.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-fit items-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-5 py-3 text-sm font-semibold text-neon-light transition-all duration-300 hover:bg-neon/20 hover:shadow-[0_0_25px_rgba(124,58,237,0.25)]"
+              className="shimmer-control inline-flex w-fit items-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-5 py-3 text-sm font-semibold text-neon-light transition-all duration-300 hover:bg-neon/20 hover:shadow-[0_0_25px_rgba(124,58,237,0.25)]"
             >
               Explore Smart Jotter
               <ExternalLink size={15} />
@@ -95,7 +95,7 @@ export default function Zephtech() {
                 key={image}
                 type="button"
                 onClick={() => setSelectedImage(image)}
-                className="group relative aspect-[3/4] overflow-hidden rounded-lg border border-glass-border bg-glass"
+                className="shimmer-control group relative aspect-[3/4] overflow-hidden rounded-lg border border-glass-border bg-glass"
                 aria-label={`View School Operating System screenshot ${index + 1}`}
               >
                 <Image
@@ -151,7 +151,7 @@ export default function Zephtech() {
                 key={image.src}
                 type="button"
                 onClick={() => setSelectedImage(image.src)}
-                className="group relative aspect-video overflow-hidden rounded-lg border border-glass-border bg-glass"
+                className="shimmer-control group relative aspect-video overflow-hidden rounded-lg border border-glass-border bg-glass"
                 aria-label={`View GroundTruth ${image.label} screenshot ${index + 1}`}
               >
                 <Image
@@ -189,7 +189,7 @@ export default function Zephtech() {
             <button
               type="button"
               onClick={() => setSelectedImage(null)}
-              className="absolute right-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white hover:bg-black/80"
+              className="shimmer-control absolute right-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white hover:bg-black/80"
               aria-label="Close expanded screenshot"
             >
               <X size={20} />

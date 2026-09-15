@@ -90,3 +90,61 @@ body {
 .animate-border-glow {
   animation: borderGlow 3s ease-in-out infinite;
 }
+
+/* ── Slow shimmer for actionable controls ── */
+.shimmer-control {
+  isolation: isolate;
+  position: relative;
+}
+
+.shimmer-control::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  padding: 2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg 285deg,
+    rgba(59, 130, 246, 0.15) 310deg,
+    rgba(167, 139, 250, 0.95) 337deg,
+    rgba(255, 255, 255, 0.95) 350deg,
+    transparent 360deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  animation: shimmerSpin 4.5s linear infinite;
+  pointer-events: none;
+}
+
+.shimmer-control::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  z-index: -2;
+  border-radius: inherit;
+  background: rgba(124, 58, 237, 0.22);
+  filter: blur(10px);
+  opacity: 0.28;
+  animation: shimmerPulse 4.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmerSpin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmerPulse {
+  0%, 100% { opacity: 0.16; }
+  50% { opacity: 0.42; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shimmer-control::before,
+  .shimmer-control::after {
+    animation: none;
+  }
+}

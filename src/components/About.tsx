@@ -9,7 +9,7 @@ export default function About() {
       <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_280px]">
         <div className="glass rounded-2xl p-8 sm:p-10">
           <p className="text-base leading-relaxed text-muted sm:text-lg">
-            The founder &amp; lead developer of ZEPHtech — a software startup
+            The founder &amp; lead developer of Z — a software startup
             firm. My team and I are focused on building data-driven systems.
             Security is non-negotiable in everything I create.
           </p>

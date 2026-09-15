@@ -9,7 +9,7 @@ const links = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Achievements", href: "#achievements" },
-  { label: "ZEPHtech", href: "#zephtech" },
+  { label: "Z", href: "#zephtech" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -36,7 +36,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6">
         {/* Logo */}
-        <a href="#" className="text-xl font-bold gradient-text tracking-tight">
+        <a href="#" className="shimmer-control text-xl font-bold gradient-text tracking-tight">
           Zeph<span className="text-neon-light">.</span>
         </a>
 
@@ -46,7 +46,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm text-muted hover:text-neon-light transition-colors duration-300"
+                className="shimmer-control text-sm text-muted hover:text-neon-light transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -57,7 +57,7 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-foreground"
+          className="shimmer-control md:hidden text-foreground"
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -80,7 +80,7 @@ export default function Navbar() {
                   <a
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="text-sm text-muted hover:text-neon-light transition-colors"
+                    className="shimmer-control text-sm text-muted hover:text-neon-light transition-colors"
                   >
                     {link.label}
                   </a>
