@@ -17,7 +17,7 @@ const websites: Project[] = [
   {
     title: "Linswrap Catering",
     description:
-      "A polished demo website built for Linswrap Catering Services — showcasing menus, services, and brand identity with a clean, appetizing layout.",
+      "A polished demo website built for Linswrap Catering Services, showcasing menus, services, and brand identity with a clean, appetizing layout.",
     link: "https://linswrap.autocoder.cc",
     linkLabel: "Live Demo",
     tag: "demo",
@@ -33,7 +33,7 @@ const websites: Project[] = [
   {
     title: "GIMS",
     description:
-      "A web platform for a heavy-machine operation skill acquisition center — presenting training programs, enrollment info, and operational expertise.",
+      "A web platform for a heavy-machine operation skill acquisition center, presenting training programs, enrollment info, and operational expertise.",
     link: "https://gims.autocoder.cc",
     linkLabel: "Live Demo",
     tag: "demo",
@@ -49,7 +49,7 @@ const websites: Project[] = [
   {
     title: "Motivation Quotes",
     description:
-      "My very first web project — a simple yet effective quotes site that serves daily inspiration. Where the journey into web development began.",
+      "My very first web project, a simple yet effective quotes site that serves daily inspiration. Where the journey into web development began.",
     link: "https://zeph-cmd.github.io/motivation-quotes/",
     linkLabel: "View Site",
     tag: "live",
@@ -60,7 +60,7 @@ const games: Project[] = [
   {
     title: "Pin Wheel Illusion",
     description:
-      "A mesmerizing visual illusion game that plays with motion perception — spin the wheel and watch your reality bend.",
+      "A mesmerizing visual illusion game that plays with motion perception. Spin the wheel and watch your reality bend.",
     link: "https://pin-wheel.autocoder.cc",
     linkLabel: "Live Demo",
     tag: "demo",
@@ -68,7 +68,7 @@ const games: Project[] = [
   {
     title: "Arena Dodger",
     description:
-      "A fast-paced browser game where reflexes are everything — dodge incoming projectiles and survive as long as you can in the arena.",
+      "A fast-paced browser game where reflexes are everything. Dodge incoming projectiles and survive as long as you can in the arena.",
     link: "https://zeph-cmd.github.io/arena-dodger-game/",
     linkLabel: "Play Game",
     tag: "live",
@@ -76,7 +76,7 @@ const games: Project[] = [
   {
     title: "Samurai Killer",
     description:
-      "An action-packed samurai combat game — slash through enemies with precision timing and rack up your highest kill streak.",
+      "An action-packed samurai combat game. Slash through enemies with precision timing and rack up your highest kill streak.",
     link: "https://zeph-cmd.github.io/samurai_killer/",
     linkLabel: "Play Game",
     tag: "live",

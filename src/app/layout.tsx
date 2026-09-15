@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Zephaniah | Portfolio",
   description:
-    "Data Science Student | Web Developer | Cybersecurity Enthusiast — Building real-world systems, not tutorials.",
+    "Data Science Student | Web Developer | Cybersecurity Enthusiast | Building real-world systems, not tutorials.",
   openGraph: {
     title: "Zephaniah | Portfolio",
     description:
