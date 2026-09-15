@@ -92,6 +92,12 @@ body {
 }
 
 /* ── Slow shimmer for actionable controls ── */
+@property --shimmer-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
 .shimmer-control {
   isolation: isolate;
   position: relative;
@@ -105,7 +111,7 @@ body {
   padding: 2px;
   border-radius: inherit;
   background: conic-gradient(
-    from 0deg,
+    from var(--shimmer-angle),
     transparent 0deg 285deg,
     rgba(59, 130, 246, 0.15) 310deg,
     rgba(167, 139, 250, 0.95) 337deg,
@@ -116,7 +122,7 @@ body {
   -webkit-mask-composite: xor;
   mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   mask-composite: exclude;
-  animation: shimmerSpin 2.8s linear infinite;
+  animation: shimmerAngle 2.8s linear infinite;
   pointer-events: none;
 }
 
@@ -133,8 +139,8 @@ body {
   pointer-events: none;
 }
 
-@keyframes shimmerSpin {
-  to { transform: rotate(360deg); }
+@keyframes shimmerAngle {
+  to { --shimmer-angle: 360deg; }
 }
 
 @keyframes shimmerPulse {
