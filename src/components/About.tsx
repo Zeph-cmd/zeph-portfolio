@@ -21,7 +21,7 @@ export default function About() {
           </p>
         </div>
 
-        <div className="relative mx-auto h-80 w-full max-w-[280px] overflow-hidden rounded-2xl border border-neon/25 shadow-[0_0_30px_rgba(124,58,237,0.15)] lg:mx-0">
+        <div className="relative mx-auto h-80 w-full max-w-[280px] overflow-hidden rounded-2xl border border-neon/25 shadow-[0_0_30px_rgba(37,99,235,0.15)] lg:mx-0">
           <Image
             src="/zeph-about.jpg"
             alt="Zephaniah smiling outdoors"

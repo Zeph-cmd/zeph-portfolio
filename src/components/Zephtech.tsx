@@ -40,7 +40,7 @@ export default function Zephtech() {
           <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-neon/10 blur-[90px] transition-opacity duration-300 group-hover:opacity-80" />
           <div className="relative z-10 grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_auto]">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-400">
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-400">
                 Z flagship · Live product
               </span>
               <h3 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -60,7 +60,7 @@ export default function Zephtech() {
               href="https://smart-jotter.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="shimmer-control inline-flex w-fit items-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-5 py-3 text-sm font-semibold text-neon-light transition-all duration-300 hover:bg-neon/20 hover:shadow-[0_0_25px_rgba(124,58,237,0.25)]"
+              className="inline-flex w-fit items-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-5 py-3 text-sm font-semibold text-neon-light transition-all duration-300 hover:bg-neon/20 hover:shadow-[0_0_25px_rgba(37,99,235,0.25)]"
             >
               Explore Smart Jotter
               <ExternalLink size={15} />
@@ -70,7 +70,7 @@ export default function Zephtech() {
 
         {/* School Operating System */}
         <article className="glass rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:glow-sm">
-          <span className="text-xs font-semibold uppercase tracking-wider text-amber-400">
+          <span className="text-xs font-semibold uppercase tracking-wider text-indigo-400">
             Case study · Screenshots
           </span>
           <h3 className="mt-3 text-xl font-bold text-foreground">
@@ -84,7 +84,7 @@ export default function Zephtech() {
             communication in one system. Access is protected with JWT
             authentication, role checks, password hashing, and ownership rules.
           </p>
-          <p className="mt-3 text-xs leading-relaxed text-amber-200/70">
+          <p className="mt-3 text-xs leading-relaxed text-indigo-200/70">
             The previous public demo is no longer available, so this project is
             presented through its product documentation and screenshots.
           </p>
@@ -95,7 +95,7 @@ export default function Zephtech() {
                 key={image}
                 type="button"
                 onClick={() => setSelectedImage(image)}
-                className="shimmer-control group relative aspect-[3/4] overflow-hidden rounded-lg border border-glass-border bg-glass"
+                className="group relative aspect-[3/4] overflow-hidden rounded-lg border border-glass-border bg-glass"
                 aria-label={`View School Operating System screenshot ${index + 1}`}
               >
                 <Image
@@ -151,7 +151,7 @@ export default function Zephtech() {
                 key={image.src}
                 type="button"
                 onClick={() => setSelectedImage(image.src)}
-                className="shimmer-control group relative aspect-video overflow-hidden rounded-lg border border-glass-border bg-glass"
+                className="group relative aspect-video overflow-hidden rounded-lg border border-glass-border bg-glass"
                 aria-label={`View GroundTruth ${image.label} screenshot ${index + 1}`}
               >
                 <Image
@@ -189,7 +189,7 @@ export default function Zephtech() {
             <button
               type="button"
               onClick={() => setSelectedImage(null)}
-              className="shimmer-control absolute right-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white hover:bg-black/80"
+              className="absolute right-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white hover:bg-black/80"
               aria-label="Close expanded screenshot"
             >
               <X size={20} />

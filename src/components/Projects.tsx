@@ -84,9 +84,9 @@ const games: Project[] = [
 ];
 
 const tagStyles: Record<Project["tag"], string> = {
-  demo: "border-amber-500/30 text-amber-400",
-  live: "border-emerald-500/30 text-emerald-400",
-  github: "border-sky-500/30 text-sky-400",
+  demo: "border-blue-500/30 text-blue-400",
+  live: "border-sky-500/30 text-sky-400",
+  github: "border-indigo-500/30 text-indigo-400",
 };
 
 const tagLabels: Record<Project["tag"], string> = {
@@ -135,7 +135,7 @@ function ProjectCard({
         href={project.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="shimmer-control mt-5 inline-flex items-center gap-2 rounded-full border border-neon/30 px-4 py-2 text-xs font-semibold text-neon-light transition-all duration-300 hover:bg-neon/10 w-fit"
+        className="mt-5 inline-flex items-center gap-2 rounded-full border border-neon/30 px-4 py-2 text-xs font-semibold text-neon-light transition-all duration-300 hover:bg-neon/10 w-fit"
       >
         {project.linkLabel}
         <LinkIcon size={14} />

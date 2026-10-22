@@ -113,7 +113,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="shimmer-control inline-flex items-center justify-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-7 py-3 text-sm font-semibold text-neon-light transition-all duration-300 hover:bg-neon/20 hover:shadow-[0_0_30px_rgba(124,58,237,0.3)] disabled:opacity-50 disabled:cursor-not-allowed"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-7 py-3 text-sm font-semibold text-neon-light transition-all duration-300 hover:bg-neon/20 hover:shadow-[0_0_30px_rgba(37,99,235,0.3)] disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {status === "sending" ? (
               <>
@@ -129,7 +129,7 @@ export default function Contact() {
           </button>
 
           {status === "success" && (
-            <div className="flex items-center gap-2 text-sm text-emerald-400">
+            <div className="flex items-center gap-2 text-sm text-blue-400">
               <CheckCircle size={16} />
               Message sent! I&apos;ll get back to you soon.
             </div>
