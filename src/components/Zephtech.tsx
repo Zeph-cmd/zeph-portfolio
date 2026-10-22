@@ -41,7 +41,7 @@ export default function Zephtech() {
           <div className="relative z-10 grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_auto]">
             <div>
               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-400">
-                Z flagship · Live product
+                Z flagship · Live on web &amp; Google Play
               </span>
               <h3 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                 Smart Jotter
@@ -56,15 +56,50 @@ export default function Zephtech() {
                 into useful understanding.
               </p>
             </div>
-            <a
-              href="https://smart-jotter.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex w-fit items-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-5 py-3 text-sm font-semibold text-neon-light transition-all duration-300 hover:bg-neon/20 hover:shadow-[0_0_25px_rgba(37,99,235,0.25)]"
-            >
-              Explore Smart Jotter
-              <ExternalLink size={15} />
-            </a>
+            <div className="flex flex-col items-center gap-4 md:w-60">
+              <div className="flex flex-wrap justify-center gap-3">
+                <a
+                  href="https://smart-jotter.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-fit items-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-5 py-3 text-sm font-semibold text-neon-light transition-all duration-300 hover:bg-neon/20 hover:shadow-[0_0_25px_rgba(37,99,235,0.25)]"
+                >
+                  Explore Smart Jotter
+                  <ExternalLink size={15} />
+                </a>
+                <a
+                  href="https://play.google.com/store/search?q=smart%20jotter%20zeph&c=apps"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-fit items-center gap-2 rounded-full border border-neon/40 bg-neon/10 px-5 py-3 text-sm font-semibold text-neon-light transition-all duration-300 hover:bg-neon/20 hover:shadow-[0_0_25px_rgba(37,99,235,0.25)]"
+                >
+                  Get it on Google Play
+                  <ExternalLink size={15} />
+                </a>
+              </div>
+              <button
+                type="button"
+                onClick={() =>
+                  setSelectedImage("/zephtech/smart-jotter/playstore-listing.jpg")
+                }
+                className="group relative w-44 overflow-hidden rounded-lg border border-glass-border bg-glass"
+                aria-label="View Smart Jotter Google Play listing screenshot"
+              >
+                <Image
+                  src="/zephtech/smart-jotter/playstore-listing.jpg"
+                  alt="Smart Jotter on the Google Play Store"
+                  width={800}
+                  height={1340}
+                  className="h-auto w-full transition-transform duration-300 group-hover:scale-105"
+                />
+                <span className="absolute inset-x-0 bottom-0 flex items-center justify-center gap-1 bg-black/60 py-1 text-[10px] text-white opacity-0 transition-opacity group-hover:opacity-100">
+                  <Images size={11} /> View
+                </span>
+              </button>
+              <span className="text-[11px] uppercase tracking-wider text-muted">
+                Live on Google Play
+              </span>
+            </div>
           </div>
         </article>
 
