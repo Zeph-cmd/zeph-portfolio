@@ -118,6 +118,8 @@ export default function Zephtech() {
             attendance, homework, approvals, audit logs, and in-app
             communication in one system. Access is protected with JWT
             authentication, role checks, password hashing, and ownership rules.
+            A built-in AI assistant is now available across admin, teacher,
+            and parent views.
           </p>
           <p className="mt-3 text-xs leading-relaxed text-indigo-200/70">
             The previous public demo is no longer available, so this project is
@@ -146,6 +148,33 @@ export default function Zephtech() {
               </button>
             ))}
           </div>
+
+          <p className="mt-6 mb-2 text-xs font-semibold uppercase tracking-wider text-muted">
+            Deployment &amp; security architecture
+          </p>
+          <button
+            type="button"
+            onClick={() => setSelectedImage("/zephtech/sos/architecture.jpg")}
+            className="group relative block w-full overflow-hidden rounded-lg border border-glass-border bg-glass"
+            aria-label="View Mobile Web App Deployment Architecture diagram"
+          >
+            <Image
+              src="/zephtech/sos/architecture.jpg"
+              alt="Mobile web app deployment architecture: client devices connect over HTTPS through Cloudflare's DDoS protection, WAF, and CDN to the application hosted on Render"
+              width={1536}
+              height={1024}
+              className="h-auto w-full transition-transform duration-300 group-hover:scale-[1.02]"
+            />
+            <span className="absolute inset-x-0 bottom-0 flex items-center justify-center gap-1 bg-black/60 py-1.5 text-[10px] text-white opacity-0 transition-opacity group-hover:opacity-100">
+              <Images size={11} /> View full diagram
+            </span>
+          </button>
+          <p className="mt-2 text-xs text-muted">
+            One application, multiple devices: public traffic reaches the app
+            only through Cloudflare&apos;s security layer (DDoS protection, WAF,
+            SSL/TLS termination, global CDN); the application server itself
+            stays private.
+          </p>
         </article>
 
         {/* GroundTruth Vision */}
