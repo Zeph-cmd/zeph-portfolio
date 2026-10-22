@@ -15,10 +15,30 @@ const groundtruthImages = [
     src: "/zephtech/groundtruth/groundtruth-1.jpg",
     label: "Mobile collector",
   },
-  ...Array.from({ length: 7 }, (_, index) => ({
-    src: `/zephtech/groundtruth/groundtruth-desktop-${index + 1}.jpg`,
-    label: "Desktop explorer",
-  })),
+  {
+    src: "/zephtech/groundtruth/groundtruth-desktop-1.jpg",
+    label: "Trip import",
+  },
+  {
+    src: "/zephtech/groundtruth/groundtruth-desktop-2.jpg",
+    label: "Imagery map",
+  },
+  {
+    src: "/zephtech/groundtruth/groundtruth-desktop-3.jpg",
+    label: "Coverage & analytics",
+  },
+  {
+    src: "/zephtech/groundtruth/groundtruth-desktop-4.jpg",
+    label: "Authenticity check",
+  },
+  {
+    src: "/zephtech/groundtruth/groundtruth-desktop-5.jpg",
+    label: "Export & gallery",
+  },
+  {
+    src: "/zephtech/groundtruth/groundtruth-desktop-6.jpg",
+    label: "AI detection",
+  },
 ];
 
 export default function Zephtech() {
@@ -180,7 +200,7 @@ export default function Zephtech() {
         {/* GroundTruth Vision */}
         <article className="glass rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:glow-sm lg:col-span-2">
           <span className="text-xs font-semibold uppercase tracking-wider text-sky-400">
-            In development · Product preview
+            Upgraded · Now with AI
           </span>
           <h3 className="mt-3 text-xl font-bold text-foreground">
             GroundTruth Vision
@@ -193,10 +213,17 @@ export default function Zephtech() {
             trips, checks file integrity with SHA-256, analyzes imagery and
             location data, and exports evidence for decision-makers.
           </p>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
+            The latest upgrade brings AI into the workflow: AI-powered object
+            detection on every photo with optional Real-ESRGAN image
+            enhancement, a built-in AI assistant for querying trip data, and a
+            100-point trip authenticity score that surfaces tampering, GPS
+            gaps, and irregular capture intervals before evidence is trusted.
+          </p>
           <p className="mt-3 text-xs text-sky-200/70">
-            Mobile collector and desktop explorer previews shown below. No
-            public link is available yet; this gallery documents the product
-            while development continues.
+            Mobile collector and the upgraded desktop explorer are shown
+            below. No public link is available yet; this gallery documents the
+            product while development continues.
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
             {["Road infrastructure", "NGO field programs", "Insurance", "Journalism", "Local government"].map((useCase) => (
