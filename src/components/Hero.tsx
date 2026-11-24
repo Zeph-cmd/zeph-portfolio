@@ -112,6 +112,12 @@ export default function Hero() {
               →
             </span>
           </a>
+          <p className="mt-6 text-sm text-muted">
+            you don&apos;t say capcut edited a video if you use it but I
+          </p>
+          <p className="mt-2 text-sm font-semibold text-neon-light">
+            AI does my coding, I do the engineering
+          </p>
         </motion.div>
       </div>
 
