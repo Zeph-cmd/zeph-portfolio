@@ -113,7 +113,7 @@ export default function Hero() {
             </span>
           </a>
           <p className="mt-6 text-sm text-muted">
-            you don&apos;t say capcut edited a video if you use it but I
+            you don&apos;t say capcut edited a video if you used it, but you did
           </p>
           <p className="mt-2 text-sm font-semibold text-neon-light">
             AI does my coding, I do the engineering
