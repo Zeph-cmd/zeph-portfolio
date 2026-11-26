@@ -13,11 +13,11 @@ const sosImages = Array.from(
 const groundtruthImages = [
   {
     src: "/zephtech/groundtruth/groundtruth-1.jpg",
-    label: "Mobile collector",
+    label: "Global collector",
   },
   {
     src: "/zephtech/groundtruth/groundtruth-desktop-1.jpg",
-    label: "Trip import",
+    label: "Trip overview",
   },
   {
     src: "/zephtech/groundtruth/groundtruth-desktop-2.jpg",
@@ -29,15 +29,19 @@ const groundtruthImages = [
   },
   {
     src: "/zephtech/groundtruth/groundtruth-desktop-4.jpg",
-    label: "Authenticity check",
+    label: "Trip analytics & AI",
   },
   {
     src: "/zephtech/groundtruth/groundtruth-desktop-5.jpg",
-    label: "Export & gallery",
+    label: "Authenticity check",
   },
   {
     src: "/zephtech/groundtruth/groundtruth-desktop-6.jpg",
-    label: "AI detection",
+    label: "Gallery",
+  },
+  {
+    src: "/zephtech/groundtruth/groundtruth-desktop-7.jpg",
+    label: "Video frame clips",
   },
 ];
 
@@ -219,6 +223,9 @@ export default function Zephtech() {
             enhancement, a built-in AI assistant for querying trip data, and a
             100-point trip authenticity score that surfaces tampering, GPS
             gaps, and irregular capture intervals before evidence is trusted.
+            The collector also now works globally — trips can be uploaded to a
+            cloud relay from anywhere in the world and pulled into the
+            explorer&apos;s cloud inbox for download.
           </p>
           <p className="mt-3 text-xs text-sky-200/70">
             Mobile collector and the upgraded desktop explorer are shown
